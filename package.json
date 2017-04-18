@@ -1,0 +1,27 @@
+{
+  "name": "two-equals",
+  "version": "1.0.0",
+  "description": "Function for check if two values are equals",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine-node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rich-97/two-equals.git"
+  },
+  "keywords": [
+    "two",
+    "equals"
+  ],
+  "author": "Ricardo Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rich-97/two-equals/issues"
+  },
+  "homepage": "https://github.com/rich-97/two-equals#readme",
+  "dependencies": {
+    "are-arrays": "^1.0.0",
+    "are-objects": "^1.0.0"
+  }
+}
