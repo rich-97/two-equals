@@ -24,4 +24,12 @@ describe('Equals test', function () {
     it('Check objects with arrays', function () {
         expect(equals({ foo: [1, null] }, { foo: [1, null] })).toBeTruthy();
     });
+
+    it('Check objects with diferent keys', function () {
+        expect(equals({ bar: [1, 'foo']}, { foo: [1, 'foo'] })).toBeFalsy();
+    });
+
+    it('Check objects with arrays that contains objects', function () {
+        expect(equals({ bar: [1, { foo: 'foo', bar: null }]}, { bar: [1, { foo: 'foo', bar: null }]})).toBeTruthy();
+    });
 });

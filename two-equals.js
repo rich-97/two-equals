@@ -12,6 +12,8 @@
 const areObjects = require('are-objects');
 const areArrays = require('are-arrays');
 
+/* Export module */
+
 module.exports = equals;
 
 /**
@@ -26,7 +28,7 @@ function equals (a, b) {
     return true;
   } else if (areObjects(a, b)) {
     if (areArrays(a, b)) {
-      if (a.length !== b.length) {
+      if (!equals(a.length, b.length)) {
         return false;
       }
     
@@ -35,12 +37,13 @@ function equals (a, b) {
           return false;
         }
       }
+
+    // At least one should be a array.
     } else if (Array.isArray(a) || Array.isArray(b)) {
-      if (!(Array.isArray(a) && Array.isArray(b))) {
+      if (!areArrays(a, b)) {
         return false;
       }
     } else {
-
       const keysA = Object.keys(a);
       const keysB = Object.keys(b);
       
